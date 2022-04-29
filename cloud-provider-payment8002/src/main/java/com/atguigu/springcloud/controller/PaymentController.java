@@ -13,9 +13,9 @@ import javax.annotation.Resource;
 public class PaymentController {
     @Resource
     private PaymentService paymentService;
-
     @Value("${server.port}")
     private String serverPort;
+
 
     @PostMapping("createPayment")
     public Result createPayment(@RequestBody Payment payment) {
@@ -23,7 +23,6 @@ public class PaymentController {
         System.out.println("端口号是：" + serverPort);
         return result ? Result.success().data("serverPort",serverPort) : Result.failure().data("serverPort",serverPort);
     }
-
     @GetMapping("getPaymentById/{id}")
     public Result getPaymentById(@PathVariable Long id) {
         Payment result = paymentService.getById(id);
