@@ -6,3 +6,7 @@ spring:
   cloud:
     zookeeper:
       connect-string: 47.110.249.72:2181
+
+
+
+
