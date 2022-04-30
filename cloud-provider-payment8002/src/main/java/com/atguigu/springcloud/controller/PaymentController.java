@@ -29,4 +29,9 @@ public class PaymentController {
         System.out.println("端口号是：" + serverPort);
         return Result.success().data("data", result).data("serverPort",serverPort);
     }
+
+    @GetMapping("loadBalance")
+    public String getPaymentLoadBalance() {
+        return serverPort;
+    }
 }
