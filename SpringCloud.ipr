@@ -20,7 +20,9 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consumer-consul-order80" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-provider-payment8006" />
         <module name="cloud-consumer-feign-order80" />
       </profile>
@@ -28,10 +30,12 @@
     <bytecodeTargetLevel>
       <module name="cloud-api-commons" target="1.8" />
       <module name="cloud-consumer-consul-order80" target="1.8" />
+      <module name="cloud-consumer-feign-hystrix-order80" target="1.8" />
       <module name="cloud-consumer-feign-order80" target="1.8" />
       <module name="cloud-consumer-order80" target="1.8" />
       <module name="cloud-eureka-server7001" target="1.8" />
       <module name="cloud-eureka-server7002" target="1.8" />
+      <module name="cloud-provider-hystrix-payment8001" target="1.8" />
       <module name="cloud-provider-payment8001" target="1.8" />
       <module name="cloud-provider-payment8002" target="1.8" />
       <module name="cloud-provider-payment8004" target="1.8" />
@@ -43,6 +47,8 @@
     <file url="file://$PROJECT_DIR$/cloud-api-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-consul-order80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-consul-order80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order80/src/main/java" charset="UTF-8" />
@@ -51,6 +57,8 @@
     <file url="file://$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka-server7002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka-server7002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8002/src/main/java" charset="UTF-8" />
@@ -59,9 +67,6 @@
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8004/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8006/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8006/src/main/resources" charset="UTF-8" />
-  </component>
-  <component name="EntryPointsManager">
-    <entry_points />
   </component>
   <component name="ExportToHTMLSettings">
     <option name="PRINT_LINE_NUMBERS" value="false" />
@@ -84,20 +89,12 @@
     <option name="TEST_RUNNER" value="UI" />
   </component>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" />
-    <option name="OPTION_SCOPE" value="protected" />
     <option name="OPTION_HIERARCHY" value="false" />
     <option name="OPTION_NAVIGATOR" value="false" />
     <option name="OPTION_INDEX" value="false" />
     <option name="OPTION_SEPARATE_INDEX" value="false" />
-    <option name="OPTION_USE_1_1" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="false" />
     <option name="OPTION_DEPRECATED_LIST" value="false" />
-    <option name="OTHER_OPTIONS" />
-    <option name="HEAP_SIZE" />
     <option name="OPEN_IN_BROWSER" value="false" />
   </component>
   <component name="JikesSettings">
@@ -118,15 +115,138 @@
       </list>
     </option>
   </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringCloud.iml" filepath="$PROJECT_DIR$/SpringCloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-api-commons/cloud-api-commons.iml" filepath="$PROJECT_DIR$/cloud-api-commons/cloud-api-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-consul-order80/cloud-consumer-consul-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-consul-order80/cloud-consumer-consul-order80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-feign-order80/cloud-consumer-feign-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-feign-order80/cloud-consumer-feign-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/cloud-provider-hystrix-payment8001.iml" filepath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/cloud-provider-hystrix-payment8001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8002/cloud-provider-payment8002.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8002/cloud-provider-payment8002.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8004/cloud-provider-payment8004.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8004/cloud-provider-payment8004.iml" />
@@ -353,6 +473,17 @@
         <root url="jar:///Applications/localRepository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.fasterxml.jackson.module:jackson-module-afterburner:2.10.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.1/jackson-module-afterburner-2.10.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.1/jackson-module-afterburner-2.10.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.1/jackson-module-afterburner-2.10.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.10.1">
       <CLASSES>
         <root url="jar:///Applications/localRepository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.1/jackson-module-jaxb-annotations-2.10.1.jar!/" />
@@ -428,6 +559,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/com/google/code/gson/gson/2.8.6/gson-2.8.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.guava:guava:15.0">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/15.0/guava-15.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/15.0/guava-15.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/15.0/guava-15.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.google.guava:guava:16.0">
@@ -527,6 +669,39 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.netflix.hystrix:hystrix-javanica:1.5.18">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.netflix.hystrix:hystrix-metrics-event-stream:1.5.18">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.18/hystrix-metrics-event-stream-1.5.18.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.18/hystrix-metrics-event-stream-1.5.18-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.18/hystrix-metrics-event-stream-1.5.18-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.netflix.hystrix:hystrix-serialization:1.5.18">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-serialization/1.5.18/hystrix-serialization-1.5.18.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-serialization/1.5.18/hystrix-serialization-1.5.18-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/netflix/hystrix/hystrix-serialization/1.5.18/hystrix-serialization-1.5.18-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.netflix.netflix-commons:netflix-commons-util:0.3.0">
@@ -1024,6 +1199,17 @@
         <root url="jar:///Applications/localRepository/io/projectreactor/reactor-core/3.3.1.RELEASE/reactor-core-3.3.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: io.reactivex:rxjava-reactive-streams:1.2.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/io/reactivex/rxjava-reactive-streams/1.2.1/rxjava-reactive-streams-1.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/io/reactivex/rxjava-reactive-streams/1.2.1/rxjava-reactive-streams-1.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/io/reactivex/rxjava-reactive-streams/1.2.1/rxjava-reactive-streams-1.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: io.reactivex:rxjava:1.3.8">
       <CLASSES>
         <root url="jar:///Applications/localRepository/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar!/" />
@@ -1231,6 +1417,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-lang3:3.9">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.commons:commons-math:2.2">
@@ -2221,6 +2418,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.2.1.RELEASE/spring-cloud-starter-netflix-eureka-server-2.2.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-hystrix:2.2.1.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-2.2.1.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-2.2.1.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-2.2.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.2.1.RELEASE">
