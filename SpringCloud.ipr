@@ -21,6 +21,7 @@
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consumer-consul-order80" />
         <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-provider-payment8006" />
@@ -32,6 +33,7 @@
       <module name="cloud-consumer-consul-order80" target="1.8" />
       <module name="cloud-consumer-feign-hystrix-order80" target="1.8" />
       <module name="cloud-consumer-feign-order80" target="1.8" />
+      <module name="cloud-consumer-hystrix-dashboard9001" target="1.8" />
       <module name="cloud-consumer-order80" target="1.8" />
       <module name="cloud-eureka-server7001" target="1.8" />
       <module name="cloud-eureka-server7002" target="1.8" />
@@ -51,6 +53,8 @@
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-hystrix-dashboard9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-hystrix-dashboard9001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka-server7001/src/main/java" charset="UTF-8" />
@@ -243,6 +247,7 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-consul-order80/cloud-consumer-consul-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-consul-order80/cloud-consumer-consul-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-feign-order80/cloud-consumer-feign-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-feign-order80/cloud-consumer-feign-order80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-hystrix-dashboard9001/cloud-consumer-hystrix-dashboard9001.iml" filepath="$PROJECT_DIR$/cloud-consumer-hystrix-dashboard9001/cloud-consumer-hystrix-dashboard9001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml" filepath="$PROJECT_DIR$/cloud-consumer-order80/cloud-consumer-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" />
@@ -2321,6 +2326,17 @@
         <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-netflix-eureka-server/2.2.1.RELEASE/spring-cloud-netflix-eureka-server-2.2.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-netflix-hystrix-dashboard:2.2.1.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-netflix-hystrix-dashboard-2.2.1.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-netflix-hystrix-dashboard-2.2.1.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-netflix-hystrix-dashboard-2.2.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-netflix-hystrix:2.2.1.RELEASE">
       <CLASSES>
         <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-netflix-hystrix/2.2.1.RELEASE/spring-cloud-netflix-hystrix-2.2.1.RELEASE.jar!/" />
@@ -2418,6 +2434,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-server/2.2.1.RELEASE/spring-cloud-starter-netflix-eureka-server-2.2.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard:2.2.1.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-dashboard-2.2.1.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-dashboard-2.2.1.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-netflix-hystrix-dashboard/2.2.1.RELEASE/spring-cloud-starter-netflix-hystrix-dashboard-2.2.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-hystrix:2.2.1.RELEASE">
@@ -2660,6 +2687,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/org/springframework/spring-webmvc/5.2.2.RELEASE/spring-webmvc-5.2.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.webjars:d3js:3.4.11">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/webjars/d3js/3.4.11/d3js-3.4.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/webjars/d3js/3.4.11/d3js-3.4.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/webjars/d3js/3.4.11/d3js-3.4.11-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.webjars:jquery:2.1.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/webjars/jquery/2.1.1/jquery-2.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/webjars/jquery/2.1.1/jquery-2.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/webjars/jquery/2.1.1/jquery-2.1.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.xmlunit:xmlunit-core:2.6.3">
