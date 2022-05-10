@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9bb59a-75ed-4b43-95e2-5498334c8265" name="Default Changelist" comment="5.9第四次提交，完成了Hystrix服务监控">
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/java/com/atguigu/springcloud/GateWayMain9527.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/java/com/atguigu/springcloud/filter/MyLogGateWayFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="1e9bb59a-75ed-4b43-95e2-5498334c8265" name="Default Changelist" comment="5.10第一次提交，完成服务网关的配置">
+      <change afterPath="$PROJECT_DIR$/cloud-config-center-3344/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-config-center-3344/src/main/java/com/atguigu/springcloud/ConfigCenterMain3344.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-config-center-3344/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringCloud.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloud.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringCloud.iws" beforeDir="false" afterPath="$PROJECT_DIR$/SpringCloud.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -310,7 +309,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PaymentMain8002">
+  <component name="RunManager" selected="Spring Boot.ConfigClient3355">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -323,17 +322,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -396,6 +384,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigCenterMain3344" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-config-center-3344" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.springcloud.ConfigCenterMain3344" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigClient3355" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-config-client-3355" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.springcloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.springcloud.ConfigClient3355" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaMain7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="cloud-eureka-server7001" />
       <extension name="coverage">
@@ -413,32 +427,6 @@
       <module name="cloud-gateway-gateway9527" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.springcloud.GateWayMain9527" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HystrixDashboardMain9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-consumer-hystrix-dashboard9001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.springcloud.HystrixDashboardMain9001" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentHystrixMain8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-provider-hystrix-payment8001" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.springcloud.PaymentHystrixMain8001" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -472,18 +460,18 @@
     <list>
       <item itemvalue="Spring Boot.GateWayMain9527" />
       <item itemvalue="Spring Boot.EurekaMain7001" />
-      <item itemvalue="Spring Boot.HystrixDashboardMain9001" />
-      <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
       <item itemvalue="Spring Boot.PaymentMain8001" />
       <item itemvalue="Spring Boot.PaymentMain8002" />
+      <item itemvalue="Spring Boot.ConfigCenterMain3344" />
+      <item itemvalue="Spring Boot.ConfigClient3355" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ConfigCenterMain3344" />
+        <item itemvalue="Spring Boot.ConfigClient3355" />
+        <item itemvalue="Spring Boot.EurekaMain7001" />
         <item itemvalue="Spring Boot.PaymentMain8002" />
         <item itemvalue="Spring Boot.PaymentMain8001" />
-        <item itemvalue="Spring Boot.EurekaMain7001" />
-        <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
-        <item itemvalue="Spring Boot.HystrixDashboardMain9001" />
       </list>
     </recent_temporary>
   </component>
@@ -530,7 +518,9 @@
       <workItem from="1652090137266" duration="561000" />
       <workItem from="1652092757112" duration="6325000" />
       <workItem from="1652100687068" duration="682000" />
-      <workItem from="1652152629199" duration="6121000" />
+      <workItem from="1652152629199" duration="9829000" />
+      <workItem from="1652171060122" duration="3772000" />
+      <workItem from="1652192090132" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="5.9第一次提交，完成了OpenFeign远程服务调用">
       <created>1652069643297</created>
@@ -560,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652100128555</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5.10第一次提交，完成服务网关的配置">
+      <created>1652163451610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652163451610</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -641,7 +638,8 @@
     <MESSAGE value="5.9第二次提交，完成了Hystrix服务降级，实现了兜底方法。" />
     <MESSAGE value="5.9第三次提交，完成了Hystrix服务熔断" />
     <MESSAGE value="5.9第四次提交，完成了Hystrix服务监控" />
-    <option name="LAST_COMMIT_MESSAGE" value="5.9第四次提交，完成了Hystrix服务监控" />
+    <MESSAGE value="5.10第一次提交，完成服务网关的配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="5.10第一次提交，完成服务网关的配置" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
