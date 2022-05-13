@@ -14,6 +14,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloudalibaba-config-nacos-client3377" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8004" />
         <module name="cloud-eureka-server7001" />
@@ -24,7 +25,10 @@
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-config-center-3344" />
+        <module name="cloudalibaba-provider-payment9002" />
+        <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-gateway-gateway9527" />
+        <module name="cloudalibaba-consumer-nacos-order83" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-provider-payment8006" />
@@ -49,6 +53,10 @@
       <module name="cloud-provider-payment8002" target="1.8" />
       <module name="cloud-provider-payment8004" target="1.8" />
       <module name="cloud-provider-payment8006" target="1.8" />
+      <module name="cloudalibaba-config-nacos-client3377" target="1.8" />
+      <module name="cloudalibaba-consumer-nacos-order83" target="1.8" />
+      <module name="cloudalibaba-provider-payment9001" target="1.8" />
+      <module name="cloudalibaba-provider-payment9002" target="1.8" />
       <module name="SpringCloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -84,6 +92,14 @@
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8004/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8006/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-payment8006/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/resources" charset="UTF-8" />
   </component>
   <component name="ExportToHTMLSettings">
     <option name="PRINT_LINE_NUMBERS" value="false" />
@@ -272,6 +288,10 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8002/cloud-provider-payment8002.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8002/cloud-provider-payment8002.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8004/cloud-provider-payment8004.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8004/cloud-provider-payment8004.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8006/cloud-provider-payment8006.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8006/cloud-provider-payment8006.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/cloudalibaba-config-nacos-client3377.iml" filepath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/cloudalibaba-config-nacos-client3377.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/cloudalibaba-consumer-nacos-order83.iml" filepath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/cloudalibaba-consumer-nacos-order83.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudalibaba-provider-payment9001/cloudalibaba-provider-payment9001.iml" filepath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/cloudalibaba-provider-payment9001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudalibaba-provider-payment9002/cloudalibaba-provider-payment9002.iml" filepath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/cloudalibaba-provider-payment9002.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" />
@@ -351,6 +371,83 @@
         <root url="jar:///Applications/localRepository/cn/hutool/hutool-all/5.1.0/hutool-all-5.1.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.alibaba.cloud:spring-cloud-alibaba-nacos-config:2.1.0.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-alibaba-nacos-config-2.1.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-alibaba-nacos-config-2.1.0.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-alibaba-nacos-config-2.1.0.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.cloud:spring-cloud-alibaba-nacos-discovery:2.1.0.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-alibaba-nacos-discovery-2.1.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-alibaba-nacos-discovery-2.1.0.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-alibaba-nacos-discovery-2.1.0.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2.1.0.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-config-2.1.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-config-2.1.0.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-config/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-config-2.1.0.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.1.0.RELEASE">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-discovery-2.1.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-discovery-2.1.0.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-discovery/2.1.0.RELEASE/spring-cloud-starter-alibaba-nacos-discovery-2.1.0.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.nacos:nacos-api:1.1.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-api/1.1.1/nacos-api-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-api/1.1.1/nacos-api-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-api/1.1.1/nacos-api-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.nacos:nacos-client:1.1.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-client/1.1.1/nacos-client-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-client/1.1.1/nacos-client-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-client/1.1.1/nacos-client-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba.nacos:nacos-common:1.1.1">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-common/1.1.1/nacos-common-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-common/1.1.1/nacos-common-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/nacos/nacos-common/1.1.1/nacos-common-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.alibaba:druid:1.1.16">
       <CLASSES>
         <root url="jar:///Applications/localRepository/com/alibaba/druid/1.1.16/druid-1.1.16.jar!/" />
@@ -360,6 +457,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/com/alibaba/druid/1.1.16/druid-1.1.16-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba:fastjson:1.2.47">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.baomidou:mybatis-plus-annotation:3.5.1">
@@ -624,6 +732,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/com/google/guava/guava/16.0.1/guava-16.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.guava:guava:19.0">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/19.0/guava-19.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/19.0/guava-19.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/com/google/guava/guava/19.0/guava-19.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.google.inject:guice:4.1.0">
@@ -1328,6 +1447,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/io/projectreactor/reactor-core/3.3.1.RELEASE/reactor-core-3.3.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.prometheus:simpleclient:0.5.0">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/io/prometheus/simpleclient/0.5.0/simpleclient-0.5.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/io/prometheus/simpleclient/0.5.0/simpleclient-0.5.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/io/prometheus/simpleclient/0.5.0/simpleclient-0.5.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: io.reactivex:rxjava-reactive-streams:1.2.1">
@@ -2582,6 +2712,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-openfeign-core/2.2.1.RELEASE/spring-cloud-openfeign-core-2.2.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.0">
+      <CLASSES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-bootstrap/3.1.0/spring-cloud-starter-bootstrap-3.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-bootstrap/3.1.0/spring-cloud-starter-bootstrap-3.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar:///Applications/localRepository/org/springframework/cloud/spring-cloud-starter-bootstrap/3.1.0/spring-cloud-starter-bootstrap-3.1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.2.1.RELEASE">
